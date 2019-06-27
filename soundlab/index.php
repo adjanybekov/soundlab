@@ -25,6 +25,10 @@
         
         <link href="style.css" rel="stylesheet">
         <link href="responsive.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="skeleton.css">
 <link rel="stylesheet" type="text/css" href="style1.css">
 <link rel="stylesheet" type="text/css" href="font-awesome1.css">
@@ -59,6 +63,14 @@ body{
 }
 .language-container{
   padding-left: 16px;
+}
+
+.dropdown-menu.dropdown-content li a{
+  color: black;
+  padding: 0;
+  height: 0;  
+  text-decoration: none;
+  display: block;
 }
 @media (min-width: 2000px)
 .navbar-right {
@@ -110,9 +122,14 @@ body{
 
                      <!--target="_blank" linkin yeni sayfada açılmasını sağlar-->
              <li><a href="index.php">ANASAYFA</a></li>
-             <li><a href="aboutus.php">HAKKIMIZDA</a></li>
-             <li><a href="apps.php">UYGULAMALAR</a></li>
-             <li><a href="download.php">DOWNLOAD</a></li>
+             <li><a href="aboutus.php">HAKKIMIZDA</a></li>            
+             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">URUNLER</a>
+              <ul class="dropdown-menu dropdown-content">
+                <li style="height: 2px"><a href="apps.php">UYGULAMALAR</a></li>
+                <li style="height: 2px"><a href="download.php">DOWNLOAD</a></li>
+              </ul>
+            </li>
+
              <li><a href="contact.php">İLETİŞİM</a></li>             
                     </ul>
                 </div>  
