@@ -125,8 +125,8 @@ body{
              <li><a href="aboutus.php">HAKKIMIZDA</a></li>            
              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">URUNLER</a>
               <ul class="dropdown-menu dropdown-content">
-                <li style="height: 2px"><a href="apps.php">UYGULAMALAR</a></li>
-                <li style="height: 2px"><a href="download.php">DOWNLOAD</a></li>
+                <li ><a href="apps.php" style="padding-top:0px ">UYGULAMALAR</a></li>
+                <li><a href="download.php" style="padding-top:0px">DOWNLOAD</a></li>
               </ul>
             </li>
 
