@@ -41,6 +41,10 @@ body{
 .navbar-default .navbar-toggle {
    margin-top: 30px;
 }
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+}
 @media (min-width: 2000px)
 .navbar-right {
     float: right!important;
@@ -205,7 +209,10 @@ function checkform(form2)
         <section class="world_map_area p_100">
             <div class="container">
                 <div class="world_map_inner">
-                    <center><img class="img-fluid" src="img/haritakonum.png" width="85%" height="85%"  alt=""></center>
+                    <center>
+
+                    <iframe width="80%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=32.72638320922852%2C39.879312808069955%2C32.82217025756837%2C39.91895278833726&amp;layer=mapnik&amp;marker=39.89913566445716%2C32.77427673339844" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=39.8991&amp;mlon=32.7743#map=14/39.8991/32.7743">Open in osm</a></small>                      
+                    </center>
                 </div>
             </div>
         </section>
