@@ -75,6 +75,32 @@ body{
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+
+     function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase()) || email.includes("@localhost");
+    }
+
+    function checkform(form2)
+    {   
+        var fields = ["adsoyad1", "mailiniz1", "konu1",  "mesaj1"]
+        var i, l = fields.length;
+        var fieldname;
+        for (i = 0; i < l; i++) {
+            fieldname = fields[i];
+            if(fieldname=="mailiniz1" && !validateEmail(form2[fieldname].value)){
+                alert("Lütfen "+form2[fieldname].id+" dogru belirtiniz !");  
+                form2[fieldname].focus();
+                return false;              
+            }
+            if (form2[fieldname].value === "") {                    
+                alert("Lütfen "+form2[fieldname].id+" belirtiniz !");                         
+                form2[fieldname].focus();
+                return false;           
+            }
+        }    
+        return true;
+    }
 </script>
     </head>
     <body>
@@ -170,6 +196,38 @@ body{
       </div>
 	  </div>
     </section>
+
+    <div class="container">
+        <div class="col-lg-6">
+
+        <form  class="contact_us_form row" name="form2" method="post" action="download2_gonder_local.php"  onsubmit="return checkform(document.form2);">
+            <div class="form-group col-lg-6">
+            <span class="icyaziii">
+                <input type="text" class="form-control" id="Ad-Soyad" name="adsoyad1" placeholder="Ad - Soyad">
+                 *</span>
+            </div>
+            <div class="form-group col-lg-6">
+            <span class="icyaziii">
+                <input type="text" class="form-control" id="Email" name="mailiniz1" placeholder="Email">
+                 *</span>
+            </div>
+            <div class="form-group col-lg-12">
+            <span class="icyaziii">
+                <input type="text" class="form-control" id="Konu" name="konu1" placeholder="Konu*">
+                 *</span>
+            </div>
+            <div class="form-group col-lg-12">
+            <span class="icyaziii">
+                <textarea class="form-control" name="mesaj1" id="Mesaj" rows="2" placeholder="Mesaj"></textarea>
+                 *</span>
+            </div>
+            <center><td>
+                <img class="img-fluid" src="img/zip.png"  alt="">
+                <input type='submit' name='submit' value='Gönder' /></td></center>                        
+        </form><br/><br/><br/>
+        </div>
+        
+    </div>                              
 </section>
         </section> 	    
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
