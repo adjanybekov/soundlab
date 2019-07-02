@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-       
+      
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="icon" href="./img/sound.png" type="image/x-icon" />
@@ -19,31 +18,53 @@
         <link href="settings.css" rel="stylesheet">
         <link href="layers.css" rel="stylesheet">
         <link href="navigation.css" rel="stylesheet">
-        		<link rel="stylesheet" type="text/css" href="skeleton.css">
-<link rel="stylesheet" type="text/css" href="style1.css">
-<link rel="stylesheet" type="text/css" href="font-awesome1.css">
-<link rel="stylesheet" type="text/css" href="animate1.css">
-<link rel="stylesheet" type="text/css" href="responsive1.css">
+        
         <!-- Extra plugin css -->
         <link href="owl.carousel.min.css" rel="stylesheet">
         
         <link href="style.css" rel="stylesheet">
         <link href="responsive.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="skeleton.css">
+<link rel="stylesheet" type="text/css" href="style1.css">
+<link rel="stylesheet" type="text/css" href="font-awesome1.css">
+<link rel="stylesheet" type="text/css" href="animate1.css">
+<link rel="stylesheet" type="text/css" href="responsive1.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
- 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+
+
 <style>
+
 body{
-	background:#ffffff;
+  background:#ffffff;
+}
+.nav{
+  padding-left: 150px;
 }
 .navbar-default{
-	background: transparent;
+  background: transparent;  
 }
 .navbar-default .navbar-toggle {
    margin-top: 30px;
 }
+.custom-container{
+  width:100%;  
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;  
+}
+.language-container{
+  padding-left: 16px;
+}
+
+
 @media (min-width: 2000px)
 .navbar-right {
     float: right!important;
@@ -70,54 +91,66 @@ body{
 </script>
     </head>
     <body>
-        
         <!--================Header Menu Area =================-->
-        <header class="main_menu_area">          
-			    <nav class="navbar-default">
-	               
-		              <div class="navbar-header">
-			               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-				               <span class="sr-only">MENU</span>
-				               <span class="icon-bar"></span>
-				               <span class="icon-bar"></span>
-				               <span class="icon-bar"></span>
-			               </button>
-			              <a class="navbar-brand"><img src="img/sound.png" class="img-responsive" /></a>
-		             </div>
-				<nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div id="navbar" class="navbar-collapse collapse">                
-                    <ul class="nav navbar-nav navbar-right">
+        <header class="main_menu_area">           
+          <nav class="navbar-default">
+            <div class="language-container">
+              <a class="dilSec" href="index.php" style="color:white">TR||</a>
+              <a class="dilSec" href="index1.php"style="color:white">ENG</a>
+            </div>
+                 <div class="custom-container">
+                  <div class="navbar-header">
+                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                       <span class="sr-only">MENU</span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                     </button>
+
+                           <a class="navbar-brand"><img src="img/sound.png" class="img-responsive" /></a>
+                 </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div id="navbar" class="navbar-collapse collapse">             
+                    <ul class="nav navbar-nav">
 
                      <!--target="_blank" linkin yeni sayfada açılmasını sağlar-->
-						 <li><a href="index1.php">HOME</a></li>
-						 <li><a href="aboutus1.php">COMPANY</a></li>
-						 <li><a href="apps1.php">PRODUCTS</a></li>
-						 <li><a href="download1.php">DOWNLOAD</a></li>
-						 <li><a href="contact1.php">CONTACT</a></li>	
+             <li><a href="index1.php">HOME</a></li>
+             <li><a href="aboutus1.php">COMPANY</a></li>            
+             <li class="submenu"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PRODUCTS</a>
+              <ul class="dropdown-menu">
+                <li ><a href="apps1.php" style="padding-top:0px ">  DNNtoCPP class </a></li>
+                <li><a href="download1.php" style="padding-top:0px">  Demo SDAT-VAY  </a></li>
+              </ul>
+            </li>
+
+             <li><a href="contact1.php">CONTACT</a></li>             
                     </ul>
-                </div>
+                </div>  
+                 
             </nav>
-		
-						 <a class="dilSec" href="index.php" style="color:white">TR ||</a>
-                         <a class="dilSec" href="index1.php"style="color:white">ENG</a>
-	</nav>
+    </div>
+            
+  </nav>
   </header>
         <!--================End Header Menu Area =================-->
         
         
+<!--================Banner Area =================-->
 <section id="manu">
-	<div class="container" id="home">
-    	<div class="row">
-      		
+  <div class="container" id="home">
+      <div class="row">
+          
                 <div class="studio">
                   <h2><br/><br/><br/>If you are in  Danger SoundLabAI is Always with You!</h2>
                   <h3>SoundLabAI is developing algorithms that detect
-					hazardous sound events in real-time and in noisy environments and developing applications using these algorithms. </h3>
+                    hazardous sound events in real-time and in noisy environments and developing applications using these algorithms.</h3>
                 </div>
-      		
-    	</div>
+          
+      </div>
   </div>
 </section>
+        <!--================End Banner Area =================-->
+
         <section class="blog_main_area p_100">
             <section class="sitesaction">
     <div class="container" id="Services">
@@ -126,7 +159,7 @@ body{
           <div class="Services">
             <h3>SOUNDLABAI DETECTS SOUNDS FROM THE FOLLOWING EVENTS!</h3>
           </div>
-		  <center><img  src="img/home-slider/footer.png" width="80%" height="80%"  alt=""></center>
+       <center><img  src="img/home-slider/footer.png" width="80%" height="80%"  alt=""></center>
         </div>
       </div>
     </div>
@@ -140,12 +173,16 @@ body{
             <h3>How does it work?</h3>
             <p></p>
           </div>
-		  <center><img src="img/home.png" width="85%" height="%85" alt=""></center>
+      <center><img src="img/anasayfa.png" width="85%" height="%85" alt=""></center>
         </div>
       </div>
     </div>
 </section>
         </section>
+  
+        
+        
+        
         
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -172,7 +209,6 @@ body{
         <script src="smoothscroll.js"></script>
         
         <script src="theme.js"></script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133180354-1"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="jquery1.js"></script>
