@@ -65,13 +65,7 @@ body{
   padding-left: 16px;
 }
 
-.dropdown-menu.dropdown-content li a{
-  color: black;
-  padding: 0;
-  height: 0;  
-  text-decoration: none;
-  display: block;
-}
+
 @media (min-width: 2000px)
 .navbar-right {
     float: right!important;
@@ -123,10 +117,10 @@ body{
                      <!--target="_blank" linkin yeni sayfada açılmasını sağlar-->
              <li><a href="index.php">ANASAYFA</a></li>
              <li><a href="aboutus.php">HAKKIMIZDA</a></li>            
-             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">URUNLER</a>
-              <ul class="dropdown-menu dropdown-content">
-                <li ><a href="apps.php" style="padding-top:0px ">UYGULAMALAR</a></li>
-                <li><a href="download.php" style="padding-top:0px">DOWNLOAD</a></li>
+             <li class="submenu"><a class="dropdown-toggle" data-toggle="dropdown" href="#">URUNLER</a>
+              <ul class="dropdown-menu">
+                <li ><a href="apps.php" style="padding-top:0px ">  DNNtoCPP class </a></li>
+                <li><a href="download.php" style="padding-top:0px">  Demo SDAT-VAY  </a></li>
               </ul>
             </li>
 
