@@ -172,22 +172,22 @@ body{
                         <form  class="contact_us_form row" name="form2" method="post" action="download_gonder_local.php"  onsubmit="return checkform(document.form2);">
                             <div class="form-group col-lg-6">
                             <span class="icyaziii">
-                                <input type="text" class="form-control" id="adsoyad1" name="adsoyad1" placeholder="Ad - Soyad">
+                                <input type="text" class="form-control" id="Ad-Soyad" name="adsoyad1" placeholder="Ad - Soyad">
                                  *</span>
                             </div>
                             <div class="form-group col-lg-6">
                             <span class="icyaziii">
-                                <input type="text" class="form-control" id="mailiniz1" name="mailiniz1" placeholder="Email">
+                                <input type="text" class="form-control" id="Email" name="mailiniz1" placeholder="Email">
                                  *</span>
                             </div>
                             <div class="form-group col-lg-12">
                             <span class="icyaziii">
-                                <input type="text" class="form-control" id="konu1" name="konu1" placeholder="Konu*">
+                                <input type="text" class="form-control" id="Konu" name="konu1" placeholder="Konu*">
                                  *</span>
                             </div>
                             <div class="form-group col-lg-12">
                             <span class="icyaziii">
-                                <textarea class="form-control" name="mesaj1" id="mesaj1" rows="2" placeholder="Mesaj"></textarea>
+                                <textarea class="form-control" name="mesaj1" id="Mesaj" rows="2" placeholder="Mesaj"></textarea>
                                  *</span>
                             </div>
                             <center><td>
