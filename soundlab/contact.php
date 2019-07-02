@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -59,50 +58,31 @@ body{
 }
 </style>
 <script language="javascript">
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase()) || email.includes("@localhost");
+}
+
 function checkform(form2)
-{
-//alert ("indexi 1  "+ document.form2.uzman.selectedIndex);
-//alert ("indexi 2  "+ document.form2.uzman.options[0].value);
-   var  sel = document.form2.uzman.selectedIndex;
-   if ( sel < 1 ) {
-   alert("Lütfen Soru soracağınız uzmanı seçiniz.!");
-   form2.uzman.focus();
-   return (false);  }
-   
-//    form2.uzman.focus();
-  if (form2.adsoyad.value == "")  {
-    alert("Lütfen Adınızı giriniz !");
-    form2.adsoyad.focus();
-	return (false); }
-  if (form2.adsoyad.value.length < 5 )  {
-    alert("Lütfen Adınızı tam giriniz !");
-    form2.adsoyad.focus();
-	return (false); }
-  if (form2.mailiniz.value == "")  {
-    alert("Lütfen mail adresinizi giriniz !");
-    form2.mailiniz.focus();
-	return (false); }
-  if (form2.konu.value == "")  {
-    alert("Lütfen konu belirtiniz !");
-    form2.konu.focus();
-	return (false); }
-  if (form2.telefon.value == "")  {
-    alert("Lütfen telefon belirtiniz !");
-    form2.telefon.focus();
-	return (false); }
-  if (form2.yer.value == "")  {
-    alert("Lütfen yer belirtiniz !");
-    form2.yer.focus();
-	return (false); }
-  if (form2.mesaj.value == "")  {
-    alert("Lütfen bir mesaj giriniz !");
-    form2.mesaj.focus();
-	return (false); }
-  if (form2.mesaj.value.length < 15 )  {
-    alert("Lüten derdinizi anlatabilecek bir cümle giriniz !");
-    form2.mesaj.focus();
-	return (false); }
-	
+{   
+    var fields = ["adsoyad1", "mailiniz1", "konu1",  "mesaj1"]
+    var i, l = fields.length;
+    var fieldname;
+    for (i = 0; i < l; i++) {
+        fieldname = fields[i];
+        if(fieldname=="mailiniz1" && !validateEmail(form2[fieldname].value)){
+            alert("Lütfen "+form2[fieldname].id+" dogru belirtiniz !");  
+            form2[fieldname].focus();
+            return false;              
+        }
+        if (form2[fieldname].value === "") {                    
+            alert("Lütfen "+form2[fieldname].id+" belirtiniz !");                         
+            form2[fieldname].focus();
+            return false;           
+        }
+    }    
+    return true;
 }
 </script>
 <!-- Hotjar Tracking Code for www.soundlabai.com -->
@@ -166,28 +146,31 @@ function checkform(form2)
                 <div class="row get_touch_inner">
                     <div class="col-lg-6">
 					
-                        <form  class="contact_us_form row" name="form2" method="post" action="gonder1.php"  onsubmit="return checkform(this);">
+                        <form  class="contact_us_form row" name="form2" method="post" action="gonder_local.php"  onsubmit="return checkform(document.form2);">
                             <div class="form-group col-lg-6">
 							<span class="icyaziii">
-                                <input type="text" class="form-control" id="adsoyad1" name="adsoyad1" placeholder="Ad - Soyad">
+                                <input type="text"  class="form-control" id="Ad-Soyad" name="adsoyad1" placeholder="Ad - Soyad">
 								 *</span>
+                                
                             </div>
                             <div class="form-group col-lg-6">
 							<span class="icyaziii">
-                                <input type="text" class="form-control" id="mailiniz1" name="mailiniz1" placeholder="Email">
+                                <input type="text" class="form-control" id="Email" name="mailiniz1" placeholder="Email">
 								 *</span>
+                                
                             </div>
                             <div class="form-group col-lg-12">
 							<span class="icyaziii">
-                                <input type="text" class="form-control" id="konu1" name="konu1" placeholder="Konu*">
+                                <input type="text" class="form-control" id="Konu" name="konu1" placeholder="Konu*">
 								 *</span>
+                                
                             </div>
                             <div class="form-group col-lg-12">
 							<span class="icyaziii">
-                                <textarea class="form-control" name="mesaj1" id="mesaj1" rows="2" placeholder="Mesaj"></textarea>
-								 *</span>
+                                <textarea class="form-control" name="mesaj1" id="Mesaj" rows="2" placeholder="Mesaj"></textarea>
+								 *</span>                            
                             </div>
-                            <center><td><input type="submit" value="Gönder" name="Submit1"><td>&nbsp;</td><input type="reset" name="Reset1" value="Formu Temizle"></td></center>                        
+                            <center><td><input type="submit" value="Gönder" name="submit"><td>&nbsp;</td><input type="reset" name="Reset1" value="Formu Temizle"></td></center>                        
                         </form><br/><br/><br/>
                     </div>
                     <div class="col-lg-6">
