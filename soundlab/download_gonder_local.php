@@ -45,7 +45,7 @@ function saveData(){
 	} 
 
 	$sql = "INSERT INTO urun1 (name, email)
-	VALUES ( " . $_POST['adsoyad1'] . " , " . $_POST['mailiniz1'] ." )";
+	VALUES ( '" . $_POST['adsoyad1'] . "' , '" . $_POST['mailiniz1'] ."' )";
 
 	$html = "<script>console.log('PHP: ".$sql."');</script>";
 
@@ -60,7 +60,7 @@ function saveData(){
 	$conn->close();
 }
 
-if(isset($_POST['adsoyad1'])){
+	if(isset($_POST['adsoyad1'])){
 	//download beginning
 	saveData();
 	if(isset($_POST['adsoyad1'])){

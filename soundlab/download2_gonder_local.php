@@ -27,9 +27,42 @@ if($mail->check($email)){
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
 } 
 */
+function saveData(){
+
+	$servername = "localhost";
+	$username = "root";
+	$password = "root";
+	$dbname = "test1";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+		$html = "<script>console.log('PHP: ".$sql."');</script>";
+
+    	echo($html);	
+	    die("Connection failed: " . $conn->connect_error);
+	} 
+
+	$sql = "INSERT INTO urun2 (name, email)
+	VALUES ( '" . $_POST['adsoyad1'] . "' , '" . $_POST['mailiniz1'] ."' )";
+
+	$html = "<script>console.log('PHP: ".$sql."');</script>";
+
+    echo($html);	
+
+	if ($conn->query($sql) === TRUE) {
+	    echo "New record created successfully";
+	} else {
+	    echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+
+	$conn->close();
+}
 
 if(isset($_POST['adsoyad1'])){
 	//download beginning
+	saveData();
 	if(isset($_POST['adsoyad1'])){
  
 	 $filename = "DNNtoCPPclass.zip";
@@ -39,14 +72,14 @@ if(isset($_POST['adsoyad1'])){
 	  header('Content-Disposition: attachment; filename="'.basename($filename).'"');
 	  header('Content-Length: ' . filesize($filename));
 
-	  flush();
+	  //flush();
 	  readfile($filename);
 	 }
 	 else{
 		 echo " Dosya Bulunamadi !"; 
 		}
 	}
-	
+
 	// download end
 
 
@@ -66,6 +99,7 @@ if(isset($_POST['adsoyad1'])){
 	echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
 	// You can also use header('Location: thank_you.php'); to redirect to another page.
 	// You cannot use header and echo together. It's one or the other.
+	
 	$website = "http://localhost/soundlab/apps.php";
 	header("refresh:3; url=" . $website); 
 	exit();
