@@ -15,7 +15,7 @@
         <section class="banner_area">
             <div class="container">
                 <div class="banner_inner_text">
-                    <h2>Download</h2>
+                    <h2>DNNtoCPP class</h2>
                 </div>
             </div>
         </section>
@@ -53,12 +53,32 @@
                                      </p>
                                 </div>
                             </div>
-				            <div class='container'>
-                                    <form method='post' action='downcode.php'>
-									<img class="img-fluid" src="img/zip.png"  alt="">
-                                    <input type='submit' name='download1' value='Download' />
-                                </form>
+				            <div class="container">
+                                <div class="col-lg-6">
+                    
+                        <form  class="contact_us_form row" name="form2" method="post" action="download_gonder_local.php"  onsubmit="return checkform(document.form2);">
+                            <div class="form-group col-lg-6">
+                            <span class="icyaziii">
+                                <input type="text" class="form-control" id="Ad-Soyad" name="adsoyad1" placeholder="Name - Surname">
+                                 *</span>
                             </div>
+                            <div class="form-group col-lg-6">
+                            <span class="icyaziii">
+                                <input type="text" class="form-control" id="Email" name="mailiniz1" placeholder="Email">
+                                 *</span>
+                            </div>
+                            <div class="form-group col-lg-12">
+                            <span class="icyaziii">
+                                <input type="text" class="form-control" id="Konu" name="konu1" placeholder="Downloading reason">
+                                 </span>
+                            </div>                          
+                            <center><td>
+                                <img class="img-fluid" src="img/zip.png"  alt="">
+                                <input type='submit' name='submit' value='Download' /></td></center>                        
+                        </form><br/><br/><br/>
+                    </div>
+                                
+                            </div>                              
                         </div>
                     </div>
                 </div>

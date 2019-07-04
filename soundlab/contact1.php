@@ -20,25 +20,25 @@
                 <div class="row get_touch_inner">
                     <div class="col-lg-6">
 					
-                        <form  class="contact_us_form row" name="form1" method="post" action="gonder.php" onsubmit="return checkform(this);">
+                        <form  class="contact_us_form row" name="form1" method="post" action="gonder_local.php" onsubmit="return checkform(document.form1);">
                             <div class="form-group col-lg-6">
 							<span class="icyaziii">
-                                <input type="text"  class="form-control" id="adsoyad" name="adsoyad" placeholder="Name">
+                                <input type="text"  class="form-control" id="adsoyad1" name="adsoyad1" placeholder="Name">
 								 *</span>
                             </div>
                             <div class="form-group col-lg-6">
 							<span class="icyaziii">
-                                <input type="text" class="form-control" id="mailiniz" name="mailiniz" placeholder="Email">
+                                <input type="text" class="form-control" id="mailiniz1" name="mailiniz1" placeholder="Email">
 								 *</span>
                             </div>
                             <div class="form-group col-lg-12">
 							<span class="icyaziii">
-                                <input type="text" class="form-control" id="konu" name="konu" placeholder="Subject*">
+                                <input type="text" class="form-control" id="konu1" name="konu1" placeholder="Subject*">
 								*</span>
                             </div>
                             <div class="form-group col-lg-12">
 							<span class="icyaziii">
-                                <textarea class="form-control" name="mesaj" id="mesaj" rows="2" placeholder="Message"></textarea>
+                                <textarea class="form-control" name="mesaj1" id="mesaj1" rows="2" placeholder="Message"></textarea>
 								*</span>
                             </div>
                                 <center><td><input type="submit" value="Send" name="Submit"><td>&nbsp;</td><input type="reset" name="Reset" value="Clean Form"></td></center>
